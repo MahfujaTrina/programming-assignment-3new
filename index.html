@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
+  <!-- Tailwind CSS and daisyUI cdn link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome cdn link or script -->
+  <script src="https://kit.fontawesome.com/adb9227d40.js" crossorigin="anonymous"></script>
+  <!-- Google Manrope Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind custom colors config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'custom-orange': '#FF4240',
+            'title-color': '#131318',
+            'p-color': '#13131863',
+            'f-color': '#FFFFFF99',
+            'form-color': '#1313180D',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .font-manrope {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="font-manrope">
+  <header class="container mx-auto">
+    <!-- navbar -->
+    <nav>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold">Hockey<span
+              class="text-4xl text-custom-orange font-extrabold -mx-2">’</span>s</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="text-custom-orange font-bold text-base">Home</a></li>
+            <li><a class="text-base">About</a></li>
+            <li><a class="text-base">Pages</a></li>
+            <li><a class="text-base">Blog</a></li>
+            <li><a class="text-base">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end lg:gap-3">
+          <button class="btn btn-ghost btn-circle">
+            <a class="btn bg-custom-orange text-lg lg:text-xl text-bold text-white lg:px-6 lg:py-2">Get Ticket</a>
+          </button>
+          
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- banner slider-->
+    <section class="px-5 relative">
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="Images/1.png" class="w-full lg:h-[550px]" />
+          <div class="absolute flex gap-4 bottom-2 left-32 lg:bottom-8 lg:left-8">
+            <a href="#slide2" class="btn btn-circle bg-black text-white">❮</a>
+            <a href="#slide2" class="btn btn-circle bg-black text-white">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="Images/3.png" class="w-full lg:h-[550px]" />
+          <div class="absolute flex gap-4 bottom-2 left-32 lg:bottom-8 lg:left-8">
+            <a href="#slide1" class="btn btn-circle bg-black text-white">❮</a>
+            <a href="#slide1" class="btn btn-circle bg-black text-white">❯</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="lg:absolute mt-4 lg:bottom-8 lg:left-96 lg:h-36">
+        <div class=" bg-black border-2 lg:border-8 border-black rounded-lg p-2 lg:p-2 w-full lg:w-3/5 ">
+          <h3 class="text-white text-xl lg:text-2xl font-extrabold">Meet all the heroes from the field</h3>
+          <p class="text-base font-medium text-[#FFFFFF99] mt-2 lg:mt-4">Hockey Heroes is a fun and welcoming programme aimed 
+            at children aged 5-8 that aims to develop both their physical and character superpowers.</p>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main class="container mx-auto">
+   
+    <section class="my-10 lg:my-24 text-center mx-5">
+      <div class="border-dashed border-y-2 border-slate-200 p-6 lg:p-8">
+        <h2 class="text-title-color text-2xl lg:text-4xl font-extrabold">Professional Hockeys Club</h2>
+      <p class="text-p-color text-x lg:text-base font-medium mt-6">HC CSKA Moscow is a Russian professional ice hockey club based in Moscow. The club is a 
+        member of the Tarasov Division in the Kontinental Hockey League.</p>
+      </div>
+
+      <div class="grid gap-8 grid-cols-1 lg:grid-cols-4 mt-10 lg:mt-20">
+      
+        <div>
+          <div class="radial-progress text-red-600" style="--value:70;" role="progressbar">
+            <h2 class="text-title-color text-xl font-extrabold">70%</h2>
+          </div>
+          <h3 class="text-xl font-semibold text-title-color">Prayer Facility</h3>
+          <p class="text-base text-p-color font-normal">There are different prayer rooms for different religions. Each room has all the amenities and peaceful environment for prayer. As a result there is no interruption in prayer.</p>
+        </div>
+      
+        <div>
+          <div class="radial-progress text-green-600" style="--value:80;" role="progressbar">
+            <h2 class="text-title-color text-xl font-extrabold">80%</h2>
+          </div>
+          <h3 class="text-xl font-semibold text-title-color">Experienced Coach</h3>
+          <p class="text-base text-p-color font-normal">If you describe someone as experienced, you mean that they have been doing a particular job or activity for a long time.</p>
+        </div>
+     
+        <div>
+          <div class="radial-progress text-amber-500" style="--value:95;" role="progressbar">
+            <h2 class="text-title-color text-xl font-extrabold">95%</h2>
+          </div>
+          <h3 class="text-xl font-semibold text-title-color">Senior Player</h3>
+          <p class="text-base text-p-color font-normal">A head coach, senior coach, or manager is a professional at training and developing athletes.</p>
+        </div>
+       
+        <div>
+          <div class="radial-progress text-blue-500" style="--value:80;" role="progressbar">
+            <h2 class="text-title-color text-xl font-extrabold">80%</h2>
+          </div>
+          <h3 class="text-xl font-semibold text-title-color">Training Ground</h3>
+          <p class="text-base text-p-color font-normal">
+            An area where people prepare for sporting competitions, with activities primarily concentrating on skills and fitness.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="my-10 lg:my-24 text-center mx-5">
+      <div class="border-dashed border-y-2 border-slate-200 p-6 lg:p-8">
+        <h2 class="text-title-color text-2xl lg:text-4xl font-extrabold">Program Sections</h2>
+      <p class="text-p-color text-x lg:text-base font-medium mt-6">This club has a variety of programs. Players are recruited by sectioning the program into different categories.</p>
+      </div>
+    
+      <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-20">
+   
+        <div class="card w-full image-full">
+          <figure><img class="w-full" src="Images/2.png" alt="Shoes" /></figure>
+          <div class="card-body mt-6 lg:mt-36 text-start">
+            <h2 class="card-title text-xl lg:text-3xl font-extrabold text-white">Junior Program</h2>
+            <p class="text-base font-medium text-white">USA Hockey's junior program provides opportunities for players ages 16-to-20 to hone and enhance their skills and is an important part of the organization's overall efforts related to player development.</p>
+            <div class="card-actions justify-start">
+              <button class="btn btn-primary bg-custom-orange border-none text-xl text-white font-bold">Register Now!</button>
+            </div>
+          </div>
+        </div>
+      
+
+        <div class="card w-full image-full">
+          <figure><img class="w-full" src="Images/3.png" alt="Shoes" /></figure>
+          <div class="card-body mt-6 lg:mt-36 text-start">
+            <h2 class="card-title text-xl lg:text-3xl  font-extrabold text-white">Teenager Program</h2>
+            <p class="text-base font-medium text-white">For ages 11 to 17. Previous skating experience is recommended. This is a skills-based class
+               designed for players with little to no hockey experience that will focus on developing basic hockey fundamentals and introducing game concepts. </p>
+            <div class="card-actions justify-start">
+              <button class="btn btn-primary bg-custom-orange border-none text-xl text-white font-bold">Register Now!</button>
+            </div>
+          </div>
+        </div>
+        <!-- third card -->
+        <div class="card lg:col-span-2 lg:w-full image-full">
+          <figure><img class="w-full" src="Images/4.png" alt="Shoes" /></figure>
+          <div class="card-body mt-6 lg:mt-36 lg:mt-80 lg:mr-96 text-start">
+            <h2 class="card-title text-xl lg:text-3xl  font-extrabold text-white">Professional Program</h2>
+            <p class="text-base font-medium text-white">Physical and mental toughness is a basic prerequisite for a professional hockey 
+              player at any level. Hockey is a contact sport, with occasional bone-crunching checks and regular faceoffs, and professional hockey players have to be able to take as well as dish out hits.</p>
+            <div class="card-actions justify-start">
+              <button class="btn btn-primary bg-custom-orange border-none text-xl text-white font-bold">Register Now!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="my-10 lg:my-24 text-center mx-5">
+      <div class="border-dashed border-y-2 border-slate-200 p-6 lg:p-8">
+        <h2 class="text-title-color text-2xl lg:text-4xl font-extrabold">Our New Products</h2>
+      <p class="text-p-color text-x lg:text-base font-medium mt-6">The best ways to promote a new product. Offer loyal customers an exclusive preview.</p>
+      </div>
+  
+
+      <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 mt-12 lg:mt-20">
+
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+          <figure><img class="p-6" src="Images/5.png" alt="Album" /></figure>
+          <div class="card-body">
+
+            <div class="flex gap-4 items-center">
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <p class="text-p-color"> 5.0</p>
+              </div>
+              <div>
+                <p class="text-p-color"><i class="fa-regular fa-eye"></i> 200</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-3" class="mask mask-heart bg-red-500" checked />
+                <p class="text-p-color"> 200</p>
+              </div>
+            </div>
+            <div class="text-start">
+              <h2 class="card-title">Jackets For Hockey Team</h2>
+              <p class="text-p-color">Team Warm Up Jacket.Add to Wish List Add to Compare.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:justify-between justify-end">
+              <h3 class=" text-custom-orange text-base font-extrabold">Price - $20.00</h3>
+              <p class="text-p-color"><i class="fa-solid fa-cart-shopping"></i> Delivery Fee : Free</p>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+          <figure><img class="p-6" src="Images/6.png" alt="Album" /></figure>
+          <div class="card-body">
+
+            <div class="flex gap-4 items-center">
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <p class="text-p-color"> 5.0</p>
+              </div>
+              <div>
+                <p class="text-p-color"><i class="fa-regular fa-eye"></i>250</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-3" class="mask mask-heart bg-red-500" checked />
+                <p class="text-p-color"> 230</p>
+              </div>
+            </div>
+            <div class="text-start">
+              <h2 class="card-title">Football</h2>
+              <p class="text-p-color">Shop for premium football of all sizes online.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:justify-between justify-end">
+              <h3 class=" text-custom-orange text-base font-extrabold">Price - $15.00</h3>
+              <p class="text-p-color"><i class="fa-solid fa-cart-shopping"></i> Delivery Fee : Free</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+          <figure><img class="p-6" src="Images/7.png" alt="Album" /></figure>
+          <div class="card-body">
+
+            <div class="flex gap-4 items-center">
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <p class="text-p-color"> 5.0</p>
+              </div>
+              <div>
+                <p class="text-p-color"><i class="fa-regular fa-eye"></i> 200</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-3" class="mask mask-heart bg-red-500" checked />
+                <p class="text-p-color"> 300</p>
+              </div>
+            </div>
+            <div class="text-start">
+              <h2 class="card-title">Cap For Hockey Team</h2>
+              <p class="text-p-color">Warrior Hockey Street Snapback Hat by Warrior.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:justify-between justify-end">
+              <h3 class=" text-custom-orange text-base font-extrabold">Price - $15.00</h3>
+              <p class="text-p-color"><i class="fa-solid fa-cart-shopping"></i> Delivery Fee : Free</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+          <figure><img class="p-6" src="Images/8.png" alt="Album" /></figure>
+          <div class="card-body">
+      
+            <div class="flex gap-4 items-center">
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <p class="text-p-color">5.0</p>
+              </div>
+              <div>
+                <p class="text-p-color"><i class="fa-regular fa-eye"></i> 1000</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-3" class="mask mask-heart bg-red-500" checked />
+                <p class="text-p-color"> 500</p>
+              </div>
+            </div>
+            <div class="text-start">
+              <h2 class="card-title">Hockey Team Jersey</h2>
+              <p class="text-p-color">TTeam Warm Up Jacket.Add to Wish List Add to Compare.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:justify-between justify-end">
+              <h3 class=" text-custom-orange text-base font-extrabold">Price - $22.00</h3>
+              <p class="text-p-color"><i class="fa-solid fa-cart-shopping"></i> Delivery Fee : Free</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+          <figure><img class="p-6" src="Images/9.png" alt="Album" /></figure>
+          <div class="card-body">
+       
+            <div class="flex gap-4 items-center">
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <p class="text-p-color">5.0</p>
+              </div>
+              <div>
+                <p class="text-p-color"><i class="fa-regular fa-eye"></i> 500</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-3" class="mask mask-heart bg-red-500" checked />
+                <p class="text-p-color">206</p>
+              </div>
+            </div>
+            <div class="text-start">
+              <h2 class="card-title">Helmet For Hockey Team</h2>
+              <p class="text-p-color">Add to Wish List Add to Compare.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:justify-between justify-end">
+              <h3 class=" text-custom-orange text-base font-extrabold">Price - $20.00</h3>
+              <p class="text-p-color"><i class="fa-solid fa-cart-shopping"></i> Delivery Fee : Free</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card lg:card-side bg-base-100 shadow-xl">
+          <figure><img class="p-6" src="Images/10.png" alt="Album" /></figure>
+          <div class="card-body">
+            
+            <div class="flex gap-4 items-center">
+              <div class="rating">
+                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                <p class="text-p-color">5.0</p>
+              </div>
+              <div>
+                <p class="text-p-color"><i class="fa-regular fa-eye"></i> 1000</p>
+              </div>
+              <div class="rating">
+                <input type="radio" name="rating-3" class="mask mask-heart bg-red-500" checked />
+                <p class="text-p-color"> 500</p>
+              </div>
+            </div>
+            <div class="text-start">
+              <h2 class="card-title">Sparkling Football</h2>
+              <p class="text-p-color">Add to Wish List Add to Compare.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:justify-between justify-end">
+              <h3 class=" text-custom-orange text-base font-extrabold">Price - $15.00</h3>
+              <p class="text-p-color"><i class="fa-solid fa-cart-shopping"></i> Delivery Fee : Free</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
